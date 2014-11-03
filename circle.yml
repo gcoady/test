@@ -1,0 +1,18 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - sbt compile
+
+dependencies:
+  cache_directories:
+    - "~/.ivy2"
+
+deployment:
+  hub: 
+    branch: master
+    commands:
+      - sed "s/<EMAIL>/$DOCKER_EMAIL/;s/<AUTH>/$DOCKER_AUTH/" < .dockercfg.template > ~/.dockercfg
+      - sbt docker:publishLocal
