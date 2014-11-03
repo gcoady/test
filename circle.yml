@@ -11,7 +11,7 @@ dependencies:
     - "~/.ivy2"
 
 deployment:
-  releases: 
-    branch: /1\.0\.*/
+  releases:
+    branch: /1.*/
     commands:
       - sbt docker:publishLocal
