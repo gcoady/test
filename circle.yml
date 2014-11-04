@@ -15,3 +15,4 @@ deployment:
     branch: /1.*/
     commands:
       - sbt docker:publishLocal
+          timeout: 30
