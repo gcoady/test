@@ -14,5 +14,5 @@ deployment:
   releases:
     branch: /1.*/
     commands:
-      - sbt docker:publishLocal
+      - sbt docker:publishLocal:
           timeout: 30
