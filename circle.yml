@@ -16,3 +16,4 @@ deployment:
     commands:
       - sbt docker:publishLocal:
           timeout: 30
+      - echo "boo"
