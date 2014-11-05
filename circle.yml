@@ -12,7 +12,7 @@ dependencies:
 
 deployment:
   releases:
-    branch: /v[0-9]/
+    branch: /v[0-9].*/
     commands:
       - sbt docker:publishLocal:
           timeout: 1200
